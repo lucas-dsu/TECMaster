@@ -8,9 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    animation: fadeIn 0.7s ease-in;
 }
 
-/* Animação */
+/* Animação de entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -22,75 +23,65 @@ body {
     }
 }
 
-body {
-    animation: fadeIn 0.7s ease-in;
-}
-
-/* Header */
+/* ================= HEADER ================= */
 header {
-    height: 120px;
-    background-color: #d1d5db;
-    padding: 10px 20px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    background-color: #b2b7bc;
+    padding: 5px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-header .logo {
-    flex: 1;
-}
-
+/* Logo */
 header .logo img {
-    height: 160px;
+    height: 100px;
     width: auto;
+    margin-top: -10px;
 }
 
-header nav {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-}
-
+/* Navegação */
 header nav ul {
-    display: flex;
     list-style: none;
-    gap: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin: 0;
 }
 
 header nav ul li a {
+    color: #2c3e50;
     text-decoration: none;
-    color: #1f2937;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #2563eb;
-}
-
-/* WhatsApp */
-header .whatsapp {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-header .whatsapp a {
-    background-color: #25d366;
-    color: white;
-    padding: 8px 16px;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 6px 12px;
     border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
 }
 
-header .whatsapp a:hover {
-    background-color: #128c7e;
+/* Hover padrão */
+header nav ul li a:hover {
+    color: #f1c40f;
 }
 
-/* Hero */
+/* Botão WhatsApp no header */
+header nav ul li a.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+}
+
+header nav ul li a.whatsapp-button:hover {
+    background-color: #1ebe5b;
+    color: white;
+}
+
+/* ================= HERO ================= */
 .hero {
     position: relative;
     width: 100%;
@@ -119,7 +110,7 @@ header .whatsapp a:hover {
     white-space: nowrap;
 }
 
-/* Description */
+/* ================= DESCRIPTION ================= */
 .description {
     background-color: white;
     color: #2c3e50;
@@ -132,7 +123,7 @@ header .whatsapp a:hover {
     margin: 0 auto;
 }
 
-/* Botão central */
+/* ================= BOTÃO CENTRAL ================= */
 .services-button {
     text-align: center;
     margin: 20px 0;
@@ -155,7 +146,7 @@ header .whatsapp a:hover {
     transform: scale(1.05);
 }
 
-/* Services Gallery */
+/* ================= SERVICES ================= */
 .services {
     position: relative;
     background-size: cover;
@@ -180,7 +171,7 @@ header .whatsapp a:hover {
     z-index: 0;
 }
 
-/* Conteúdo sobreposto */
+/* Conteúdo sobre a película */
 .services-button,
 .service-gallery {
     position: relative;
@@ -201,7 +192,7 @@ header .whatsapp a:hover {
     transform: scale(1.05);
 }
 
-/* Página Orçamento */
+/* ================= ORÇAMENTO ================= */
 .orcamento {
     display: flex;
     flex-direction: column;
@@ -242,18 +233,29 @@ header .whatsapp a:hover {
     transform: scale(1.05);
 }
 
-/* Responsividade */
+/* ================= RESPONSIVIDADE ================= */
 @media (max-width: 768px) {
     header {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        height: auto;
+    }
+
+    header .logo img {
+        height: 80px;
+        margin-top: 0;
     }
 
     header nav ul {
-        gap: 15px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero {
-        height: 220px;
+        height: 200px;
     }
 
     .hero h1 {
