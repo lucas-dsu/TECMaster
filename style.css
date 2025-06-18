@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +8,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    animation: fadeIn 0.7s ease-in;
 }
 
-/* Animação de entrada */
+/* Animação */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -23,60 +22,75 @@ body {
     }
 }
 
+body {
+    animation: fadeIn 0.7s ease-in;
+}
+
 /* Header */
 header {
+    height: 120px;
+    background-color: #d1d5db;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b2b7bc;
-    padding: 10px 20px;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    flex: 1;
 }
 
 header .logo img {
-    height: 80px;
+    height: 160px;
     width: auto;
 }
 
-header nav ul {
-    list-style: none;
+header nav {
+    flex: 2;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-header nav ul li {
-    margin-left: 30px;
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 header nav ul li a {
-    color: #2c3e50;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
-    padding: 6px 12px;
-    border-radius: 20px;
+    color: #1f2937;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
-/* Hover padrão */
 header nav ul li a:hover {
-    color: #f1c40f;
+    color: #2563eb;
 }
 
-/* Botão WhatsApp */
-header nav ul li a.whatsapp-button {
-    background-color: #25D366;
+/* WhatsApp */
+header .whatsapp {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .whatsapp a {
+    background-color: #25d366;
     color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-header nav ul li a.whatsapp-button:hover {
-    background-color: #1ebe5b;
-    color: white;
+header .whatsapp a:hover {
+    background-color: #128c7e;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -118,7 +132,7 @@ header nav ul li a.whatsapp-button:hover {
     margin: 0 auto;
 }
 
-/* Botão Central */
+/* Botão central */
 .services-button {
     text-align: center;
     margin: 20px 0;
@@ -155,6 +169,7 @@ header nav ul li a.whatsapp-button:hover {
     transition: background-image 1s ease-in-out;
 }
 
+/* Película escura */
 .services .overlay {
     position: absolute;
     top: 0;
@@ -165,6 +180,7 @@ header nav ul li a.whatsapp-button:hover {
     z-index: 0;
 }
 
+/* Conteúdo sobreposto */
 .services-button,
 .service-gallery {
     position: relative;
@@ -226,58 +242,23 @@ header nav ul li a.whatsapp-button:hover {
     transform: scale(1.05);
 }
 
-/* Botão flutuante WhatsApp (opcional) */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50px;
-    padding: 14px 20px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    font-size: 18px;
-    z-index: 100;
-    transition: background-color 0.3s ease, transform 0.3s;
-}
-
-.whatsapp-float:hover {
-    background-color: #1ebe5b;
-    transform: scale(1.05);
-}
-
-/* ================= RESPONSIVIDADE ================= */
+/* Responsividade */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    header .logo img {
-        height: 60px;
+        flex-direction: row;
     }
 
     header nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    header nav ul li {
-        margin-left: 0;
+        gap: 15px;
     }
 
     .hero {
-        height: 200px;
+        height: 220px;
     }
 
     .hero h1 {
         font-size: 24px;
         white-space: normal;
-        padding: 8px 16px;
         text-align: center;
     }
 
@@ -288,20 +269,6 @@ header nav ul li a.whatsapp-button:hover {
 
     .services-button button {
         padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    .orcamento h2 {
-        font-size: 26px;
-        text-align: center;
-    }
-
-    .orcamento p {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    .description {
         font-size: 16px;
     }
 }
