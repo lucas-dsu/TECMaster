@@ -160,6 +160,11 @@ header nav ul li a.whatsapp-button:hover {
     transition: background-image 1s ease-in-out;
 }
 
+.orcamento .whatsapp-button:hover {
+    background-color: #1ebe5b;
+    transform: scale(1.05);
+}
+
 /* Película escura */
 .services .overlay {
     position: absolute;
@@ -226,11 +231,6 @@ header nav ul li a.whatsapp-button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s;
-}
-
-.orcamento .whatsapp-button:hover {
-    background-color: #1ebe5b;
-    transform: scale(1.05);
 }
 
 /* ================= RESPONSIVIDADE ================= */
