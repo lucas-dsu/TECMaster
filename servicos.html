@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECMaster - Serviços</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,11 +16,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="empresa.html">Empresa</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="orcamento.html">Orçamento</a></li>
-                <li><a class="whatsapp-button" href="https://wa.me/5551997952616" target="_blank">WhatsApp</a></li>
+                <li data-aos="fade-up" data-aos-duration="1500"><a href="index.html">Início</a></li>
+                <li data-aos="fade-down" data-aos-duration="1500"><a href="empresa.html">Sobre nós</a></li>
+                <li data-aos="fade-up" data-aos-duration="1500"><a href="servicos.html">Serviços</a></li>
+                <li data-aos="fade-down" data-aos-duration="1500"><a href="orcamento.html">Orçamento</a></li>
+                <li data-aos="fade-up" data-aos-duration="1500"><a class="whatsapp-button" href="https://wa.me/5551997952616" target="_blank">WhatsApp</a></li>
             </ul>
         </nav>
     </header>
@@ -46,5 +48,11 @@
     </section>
 
     <script src="script.js"></script>
+
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

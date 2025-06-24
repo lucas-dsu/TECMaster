@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECMaster - Pisos Industriais</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <script>
@@ -29,10 +32,10 @@
     </div>
     <nav>
         <ul>
-            <li><a href="empresa.html">Empresa</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-            <li><a class="whatsapp-button" href="https://wa.me/5551997952616" target="_blank">WhatsApp</a></li>
+            <li data-aos="fade-up" data-aos-duration="1500"><a href="empresa.html">Sobre nós</a></li>
+            <li data-aos="fade-down" data-aos-duration="1500"><a href="servicos.html">Serviços</a></li>
+            <li data-aos="fade-up" data-aos-duration="1500"><a href="orcamento.html">Orçamento</a></li>
+            <li data-aos="fade-down" data-aos-duration="1500"><a class="whatsapp-button" href="https://wa.me/5551997952616" target="_blank">WhatsApp</a></li>
         </ul>
     </nav>
 </header>
@@ -40,7 +43,7 @@
 
 <section class="hero">
     <img src="images/pisofundo1.JPG" alt="Piso Industrial" class="hero-image">
-    <h1>Pisos que sustentam grandes negócios.</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="2500">Pisos que sustentam grandes negócios.</h1>
 </section>
 
 <section class="description">
@@ -52,7 +55,7 @@
 <section class="services" id="services">
     <div class="overlay"></div>
     <section class="services-button">
-        <button onclick="scrollToServices()">Conheça nossos serviços</button>
+        <button onclick="scrollToServices()"></a>Conheça nossos serviços</button>
     </section>
 
     <div class="service-gallery">
@@ -64,5 +67,12 @@
 </section>
 
 <script src="script.js"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
