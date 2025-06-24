@@ -237,7 +237,7 @@ header nav ul li a.whatsapp-button:hover {
 @media (max-width: 768px) {
     header {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         padding: 10px;
         height: auto;
@@ -249,8 +249,9 @@ header nav ul li a.whatsapp-button:hover {
     }
 
     header nav ul {
+        flex-direction: row;
         gap: 12px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
     }
 
