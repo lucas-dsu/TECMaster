@@ -22,3 +22,17 @@ if (servicesSection) {
     setInterval(changeBackground, 4000);
     changeBackground();
 }
+
+function calcularArea() {
+  const largura = parseFloat(document.getElementById("largura").value);
+  const comprimento = parseFloat(document.getElementById("comprimento").value);
+  const resultadoEl = document.getElementById("resultado");
+
+  if (!largura || !comprimento || largura <= 0 || comprimento <= 0) {
+    resultadoEl.textContent = "Por favor, insira valores válidos.";
+    return;
+  }
+
+  const area = largura * comprimento;
+  resultadoEl.textContent = `Área total: ${area.toFixed(2)} m²`;
+}

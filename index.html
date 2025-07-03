@@ -33,6 +33,7 @@
     </div>
     <nav>
         <ul>
+            <li data-aos="fade-up" data-aos-duration="1500"><a href="#calculadora">Calcular m²</a></li>
             <li data-aos="fade-up" data-aos-duration="1500"><a href="empresa.html">Sobre nós</a></li>
             <li data-aos="fade-down" data-aos-duration="1500"><a href="servicos.html">Serviços</a></li>
             <li data-aos="fade-up" data-aos-duration="1500"><a href="orcamento.html">Orçamento</a></li>
@@ -63,19 +64,15 @@
         
         <a href="servicos.html">
             <img src="images/piso1.JPG" alt="Piso 1">
-            <p class="service-title">Piso Epóxi</p>
         </a>
         <a href="servicos.html">
             <img src="images/piso2.JPG" alt="Piso 2">
-            <p class="service-title">Piso Industrial</p>
         </a>
         <a href="servicos.html">
             <img src="images/piso3.JPG" alt="Piso 3">
-            <p class="service-title">Piso de Concreto</p>
         </a>
         <a href="servicos.html">
             <img src="images/piso4.JPG" alt="Piso 4">
-            <p class="service-title">Piso Antiderrapante</p>
         </a>
         
     </div>
@@ -88,6 +85,20 @@
 <script>
   AOS.init();
 </script>
+
+<section class="calc-metros" id="calculadora">
+  <h2>Calculadora de Metros Quadrados</h2>
+  <p>Informe as medidas da área para calcular a metragem:</p>
+
+  <div class="form-calc">
+    <input type="number" id="largura" placeholder="Largura (m)">
+    <input type="number" id="comprimento" placeholder="Comprimento (m)">
+    <button onclick="calcularArea()">Calcular</button>
+  </div>
+
+  <p id="resultado"></p>
+</section>
+
 
 <footer>
   <div class="footer-content">
