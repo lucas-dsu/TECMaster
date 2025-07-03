@@ -40,12 +40,38 @@
         </p>
     </section>
 
-    <section class="service-gallery">
-        <img src="images/piso1.JPG" alt="Piso 1">
-        <img src="images/piso2.JPG" alt="Piso 2">
-        <img src="images/piso3.JPG" alt="Piso 3">
-        <img src="images/piso4.JPG" alt="Piso 4">
-    </section>
+    <section class="servicos-container">
+      <div class="servico-card">
+  <img src="images/pu.jpg" alt="Piso PU">
+  <h3>Piso PU (Poliuretano)</h3>
+  <button onclick="abrirModal('pu')">Ver detalhes</button>
+</div>
+
+<div class="servico-card">
+  <img src="images/endurecido.jpg" alt="Piso com Endurecedor">
+  <h3>Piso com Endurecedor</h3>
+  <button onclick="abrirModal('endurecido')">Ver detalhes</button>
+</div>
+
+<div class="servico-card">
+  <img src="images/recuperacao.jpg" alt="Recuperação de Piso">
+  <h3>Recuperação de Piso</h3>
+  <button onclick="abrirModal('recuperacao')">Ver detalhes</button>
+</div>
+
+  <div class="servico-card">
+    <img src="images/polido.jpg" alt="Concreto Polido">
+    <h3>Piso de Concreto Polido</h3>
+    <button onclick="abrirModal('polido')">Ver detalhes</button>
+  </div>
+
+  <div class="servico-card">
+    <img src="images/epoxi.jpg" alt="Piso Epóxi">
+    <h3>Piso Epóxi</h3>
+    <button onclick="abrirModal('epoxi')">Ver detalhes</button>
+  </div>
+</section>
+
 
     <script src="script.js"></script>
 
@@ -54,6 +80,83 @@
 <script>
   AOS.init();
 </script>
+<!-- Modal PU -->
+<div class="modal" id="modal-pu">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('pu')">&times;</span>
+    <h2>Piso PU (Poliuretano)</h2>
+    <p>Excelente resistência a produtos químicos e variações térmicas. Ideal para indústrias alimentícias e farmacêuticas.</p>
+    <div class="carousel">
+      <button class="carousel-prev" onclick="mudarSlide('pu', -1)">&#10094;</button>
+      <img src="images/pu1.jpg" class="carousel-slide pu-slide active">
+      <img src="images/pu2.jpg" class="carousel-slide pu-slide">
+      <img src="images/pu3.jpg" class="carousel-slide pu-slide">
+      <button class="carousel-next" onclick="mudarSlide('pu', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Endurecido -->
+<div class="modal" id="modal-endurecido">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('endurecido')">&times;</span>
+    <h2>Piso com Endurecedor</h2>
+    <p>Aplicação de endurecedores para aumentar a resistência e durabilidade do piso.</p>
+    <div class="carousel">
+      <button class="carousel-prev" onclick="mudarSlide('endurecido', -1)">&#10094;</button>
+      <img src="images/endurecido1.jpg" class="carousel-slide endurecido-slide active">
+      <img src="images/endurecido2.jpg" class="carousel-slide endurecido-slide">
+      <button class="carousel-next" onclick="mudarSlide('endurecido', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Recuperação -->
+<div class="modal" id="modal-recuperacao">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('recuperacao')">&times;</span>
+    <h2>Recuperação de Piso</h2>
+    <p>Correções de trincas, desgastes e irregularidades, deixando o piso como novo.</p>
+    <div class="carousel">
+      <button class="carousel-prev" onclick="mudarSlide('recuperacao', -1)">&#10094;</button>
+      <img src="images/recuperacao1.jpg" class="carousel-slide recuperacao-slide active">
+      <img src="images/recuperacao2.jpg" class="carousel-slide recuperacao-slide">
+      <button class="carousel-next" onclick="mudarSlide('recuperacao', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Concreto Polido -->
+<div class="modal" id="modal-polido">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('polido')">&times;</span>
+    <h2>Piso de Concreto Polido</h2>
+    <p>Ideal para áreas industriais e comerciais. Alta resistência e ótimo custo-benefício.</p>
+    <div class="carousel">
+      <button class="carousel-prev" onclick="mudarSlide('polido', -1)">&#10094;</button>
+      <img src="images/polido1.jpg" class="carousel-slide polido-slide active">
+      <img src="images/polido2.jpg" class="carousel-slide polido-slide">
+      <img src="images/polido3.jpg" class="carousel-slide polido-slide">
+      <button class="carousel-next" onclick="mudarSlide('polido', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Epóxi -->
+<div class="modal" id="modal-epoxi">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal('epoxi')">&times;</span>
+    <h2>Piso Epóxi</h2>
+    <p>Revestimento ideal para ambientes que exigem higiene, como hospitais, laboratórios e indústrias alimentícias.</p>
+    <div class="carousel">
+      <button class="carousel-prev" onclick="mudarSlide('epoxi', -1)">&#10094;</button>
+      <img src="images/epoxi1.jpg" class="carousel-slide epoxi-slide active">
+      <img src="images/epoxi2.jpg" class="carousel-slide epoxi-slide">
+      <img src="images/epoxi3.jpg" class="carousel-slide epoxi-slide">
+      <button class="carousel-next" onclick="mudarSlide('epoxi', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="footer-content">
@@ -71,5 +174,37 @@
     <p>&copy; 2025 TEC Master - Todos os direitos reservados.</p>
   </div>
 </footer>
+<script>
+  function abrirModal(tipo) {
+    document.getElementById(`modal-${tipo}`).style.display = "flex";
+    mostrarSlide(tipo, 0);
+  }
+
+  function fecharModal(tipo) {
+    document.getElementById(`modal-${tipo}`).style.display = "none";
+  }
+
+  const slides = {
+    polido: 0,
+    epoxi: 0
+  };
+
+  function mostrarSlide(tipo, index) {
+    const slideEls = document.querySelectorAll(`.${tipo}-slide`);
+    if (index >= slideEls.length) slides[tipo] = 0;
+    if (index < 0) slides[tipo] = slideEls.length - 1;
+    else slides[tipo] = index;
+
+    slideEls.forEach((slide, i) => {
+      slide.classList.toggle("active", i === slides[tipo]);
+    });
+  }
+
+  function mudarSlide(tipo, dir) {
+    mostrarSlide(tipo, slides[tipo] + dir);
+  }
+</script>
+
+
 </body>
 </html>
