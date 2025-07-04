@@ -524,8 +524,9 @@ footer {
     }
 
     header .logo img {
-        height: 80px;
-        margin-top: 0;
+        height: 180px ! important;
+        margin-top: 0 !important;
+        width: auto;
     }
 
     header nav ul {
