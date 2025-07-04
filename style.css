@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 body {
 
@@ -47,10 +51,13 @@ header .logo img {
 
 /* Navegação */
 header nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* <-- Adicione isso */
+  justify-content: center;
+  padding: 10px; /* opcional */
 }
 
 header nav ul li {
@@ -550,7 +557,8 @@ footer {
 
     nav ul li a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 12px;
+  font-size: 14px;
   text-decoration: none;
   color: white;
   transition: all 0.3s ease;
@@ -652,6 +660,58 @@ nav ul li a:hover {
     font-size: 24px;
   }
 }
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 0 10px;
+        overflow-x: hidden; /* Evita scroll horizontal */
+    }
+
+    header nav ul li {
+        flex-shrink: 1; /* Permite encolher */
+        min-width: 0;   /* Permite o encolhimento correto */
+    }
+
+    header nav ul li a {
+        display: block;
+        white-space: nowrap; /* Sem quebra de linha */
+        padding: 6px 8px;
+        font-size: 14px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Reticências se o texto for longo */
+        max-width: 100px; /* Limita largura máxima */
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+
+    header nav ul li a.whatsapp-button {
+        background-color: #25D366;
+        color: white;
+        padding: 6px 10px;
+        max-width: 120px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 12px;
+        padding: 4px 6px;
+        max-width: 80px;
+    }
+
+    header nav ul li a.whatsapp-button {
+        max-width: 100px;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
 
 
 }
