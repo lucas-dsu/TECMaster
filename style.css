@@ -651,7 +651,7 @@ nav ul li a:hover {
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 20px;
-    top: 55%;
+    top: 35%;
   }
   .description {
     font-size: 15px;
