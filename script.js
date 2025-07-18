@@ -7,7 +7,7 @@ function scrollToServices() {
 const images = [
   'images/piso1.JPG',
   'images/piso2.JPG',
-  'images/piso3.JPG',
+  'images/piso3.png',
   'images/piso4.JPG'
 ];
 
